@@ -1,9 +1,6 @@
-import type { ReactNode, ComponentType } from "react";
+import type { ReactNode } from "react";
+import type { LucideIcon } from "lucide-react";
 import { Info, AlertTriangle, CheckCircle2, XCircle } from "lucide-react";
-
-/* Alert — inline notification banner.
-   Used for weather warnings, service notices, validation messages.
-   Always pairs a title with optional body and action. */
 
 type Tone = "info" | "warning" | "success" | "danger";
 
@@ -16,7 +13,7 @@ interface AlertProps {
 
 const TONE: Record<
   Tone,
-  { bg: string; border: string; icon: ComponentType<{ className?: string; strokeWidth?: number }>; iconColor: string }
+  { bg: string; border: string; icon: LucideIcon; iconColor: string }
 > = {
   info: {
     bg: "bg-[#EFF6FF]",
